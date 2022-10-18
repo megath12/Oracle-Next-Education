@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function imprimir(texto){
+            document.write(texto)
+        }
+        function salto(){
+            document.write("<br>")
+        }
+        var vp=prompt("Escibre que tabla te interesa: ")
+        var co=1;
+        while (co<=10){
+            imprimir(co+" x  5 = "+co*vp);
+            co+=1;
+            salto()
+        }
+        var ci
+        for (ci=1;ci<=10;ci++){
+            imprimir(ci*1+" x "+vp*1+ " = "+ci*vp)
+            salto()
+        }
+    </script>
+</body>
+</html>

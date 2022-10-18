@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function imprimir(texto){
+            document.write(texto)
+        }
+        function salto(){
+            document.write("<br>")
+        }
+        var np, co=1,su=0,ed;
+        np=parseInt(prompt("Num de personeas"))
+        while (co<=np){
+            ed=parseInt(prompt("Edad"))
+            su+=ed
+            co++
+        }
+        imprimir("Promedio es: "+su/np)
+    </script>
+</body>
+</html>

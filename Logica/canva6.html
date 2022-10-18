@@ -1,0 +1,36 @@
+
+<canvas height="400" width="600"></canvas>
+
+<script>
+    var pantalla=document.querySelector("canvas");
+    var pincel=pantalla.getContext("2d");
+    var cn=0,colo;
+    var cl=["blue","red","green"]
+
+    pincel.fillStyle="grey"
+    pincel.fillRect(0,0,600,400)
+
+    function aci(evento){
+        var x=evento.pageX - pantalla.offsetLeft;
+        var y=evento.pageY - pantalla.offsetTop;
+        if(cn>2){
+            cn=0
+        }
+        pincel.fillStyle=cl[cn]
+        cn+=1
+        pincel.beginPath()
+        pincel.arc(x,y,25,0,2*3.1416)
+        pincel.fill()
+        console.log(evento)
+        //alert(x+" "+y)
+    }
+
+    function ale(evento){
+        var x=evento.pageX - pantalla.offsetLeft;
+        var y=evento.pageY - pantalla.offsetTop;
+        alert(x+" "+y)
+    }
+
+    pantalla.onclick=aci
+
+</script>

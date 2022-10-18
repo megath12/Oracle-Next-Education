@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var al,pe;
+        function imc(al,pe){
+            document.write("El indice de masa corporal es de: "+pe/(al**2)+"<br>")
+        }
+        document.write("Pablo ")
+        imc(1.7,75);
+
+        document.write("Cristiano ")
+        imc(1.8,75);
+
+        function nimc(al,pe){
+            return pe/(al**2);
+        }
+
+        function pimc(i1,i2){
+            document.write("<br><br>")
+            return (i1+i2)/2;
+        }
+
+        i1=nimc(1.7,75);
+        i2=nimc(1.82,75);
+        p=pimc(i1,i2)
+        document.write("El promedio de IMC es de: "+p)
+
+        function salto(){
+            document.write("<br><br><br>")
+        }
+        function imprimir(texto){
+            salto()
+            document.write(texto)
+            salto()
+        }
+
+        function cimc(a,b,c){
+            y="El IMC de "+c+" es el siguiente "+a/b**2;
+            imprimir(y);
+        }
+
+        pe=prompt("Escibe tu peso ")
+        al=prompt("Escriba su altura ")
+        no=prompt("Escriba su nombre")
+        cimc(pe,al,no)
+
+    </script>
+</body>
+</html>
+

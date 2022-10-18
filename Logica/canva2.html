@@ -1,0 +1,22 @@
+
+<CANVAS height="1000" width="1000"></CANVAS>
+
+<script>
+    var pantalla= document.querySelector("canvas")
+    var pincel=pantalla.getContext("2d") 
+
+    function recta(a,b,c,d,e,f,g,h){
+        pincel.fillStyle="cyan"
+        pincel.fillRect(a,b,c,d)
+        pincel.strokeStyle="black"
+        pincel.strokeRect(e,f,g,h)
+    }
+
+    var g=50
+    //recta(0,0,50,50,0,0,50,50)
+    //recta(50,50,50,50,50,50,50,50)
+    for(var erf=0;erf<=800;erf=erf+50){
+        recta(erf,erf,50,50,erf,erf,50,50)
+    }
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programa Año mundial de la MaFIFA</h1>
+    <script>
+        var ada,anho,ape,k;
+        function imprimir(texto){
+            document.write(texto)
+        }
+        //imprimir("futbol")
+        ada=1930;
+        k=0;
+        ape=parseInt(prompt("Año mundial"))
+        if (ape%2==0){
+            while(ada<=2020&&ada>=1930){
+                if (ape==ada){
+                    imprimir("Si hubo mundial");
+                    k+=1;
+                    break;
+                }
+                ada+=4;
+            }
+            if (k==0){
+                imprimir("No hubo mundial")
+            }
+ 
+            //imprimir("No hubo mundial")
+        }
+        else{
+            imprimir("No hubo mundial ")
+        }
+
+    </script>
+</body>
+</html>

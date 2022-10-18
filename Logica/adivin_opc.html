@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var va,vp;
+
+        function salto(){
+            document.write("<br><br><br>")
+        }
+        function imprimir(texto){
+            salto()
+            document.write(texto)
+            salto()
+        }
+        va=Math.round(Math.random()*10)
+        //imprimir(va)
+        var fe=1;
+        while (fe<=3){
+            vp=parseInt(prompt("Escribe un numero del 1 al 10"))
+            if(va==vp){
+                imprimir("Numero correcto"+va)
+                salto()
+                alert("Acertaste")
+                break
+            //    imprimir(va)
+            }
+            else{
+                imprimir("Numero incorrecto, intenta de nuevo")
+                salto()
+                imprimir(va)
+            }
+            fe++;
+        }
+    </script>
+</body>
+</html>

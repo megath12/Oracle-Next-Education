@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futbo-olé</title>
+</head>
+<body>
+    <script>
+        var v,e,t;
+        document.write("<h1>Puntos en temporada</h1>")
+
+        function salto(){
+            document.write("<br><br>")
+        }
+        function imprimir(texto){
+            document.write(texto)
+        }
+
+        v=parseInt(prompt("Victorias de tu equipo"))
+        e=parseInt(prompt("Empates de tu equipo"))
+        t=v*3+e*1;
+        imprimir("Los puntos de tu equipo son: "+t)
+        salto()
+        if (t>28){
+            imprimir("El equipo esta mejor que la temporada anterior")
+        }
+        else if (t==28){
+            imprimir("El equipo esta igual que la temporada anterior")
+        }
+        else{
+            imprimir("El equipo esta peor que la temporada anterior")
+        }
+
+    </script>
+</body>
+</html>

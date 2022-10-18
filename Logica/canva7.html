@@ -1,0 +1,45 @@
+
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla=document.querySelector("canvas")
+    var pincel=pantalla.getContext("2d")
+    var x=0,cn=0;
+
+    pincel.fillStyle="lightgrey"
+    pincel.fillRect(0,0,600,400)
+
+    function circu(x,y,rad){
+        pincel.fillStyle="blue"
+        pincel.beginPath()
+        pincel.arc(x,y,rad,0,2*Math.PI)
+        pincel.fill()
+
+    }
+
+    function limp(){
+        pincel.clearRect(0,0,600,400)
+    }
+
+    function acp(){
+        if(cn==0){
+            limp()
+            circu(x,20,10)
+            x++
+            if(x>=600){
+                cn=1;
+            }
+        }
+        else{
+            limp()
+            circu(x,20,10)
+            x--
+            if(x<=0){
+                cn=0
+            }
+        }
+    }
+    setInterval(acp,5)
+
+</script>

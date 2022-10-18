@@ -1,0 +1,21 @@
+
+<canvas height="600" width="600"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas")
+    var pincel = pantalla.getContext("2d")
+
+    function cir(x,y,r,n,color){
+        pincel.fillStyle=color
+        pincel.beginPath()
+        pincel.arc(x,y,r,n,2*3.1416)
+        pincel.fill()
+    }
+
+    cir(300,300,25,0,"cyan")
+    cir(250,300,25,0,"red")
+    cir(350,300,25,0,"green")
+    cir(300,250,25,0,"black")
+    cir(300,350,25,0,"orange")
+
+</script>

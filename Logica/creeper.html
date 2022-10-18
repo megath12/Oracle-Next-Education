@@ -1,0 +1,34 @@
+
+<canvas width="1300" height="800"></canvas>
+
+<script>
+    var pantalla=document.querySelector("canvas");
+    var pincel=pantalla.getContext("2d");
+
+    // BASE  VERDE
+    pincel.fillStyle="darkgreen"
+    pincel.fillRect(350,100,600,600);
+
+    // OJO IZQ
+    pincel.fillStyle="black"
+    pincel.fillRect(430,200,150,150);
+
+    // OJO DER
+    pincel.fillStyle="black"
+    pincel.fillRect(720,200,150,150);
+    
+    // NARIZ
+    pincel.fillStyle="black"
+    pincel.fillRect(580,350,140,80);
+    
+    // bigote
+    pincel.fillStyle="black"
+    pincel.fillRect(500,420,300,100);
+
+    pincel.fillStyle="black"
+    pincel.fillRect(500,420,80,180);
+
+    pincel.fillStyle="black"
+    pincel.fillRect(720,420,80,180);
+
+</script>

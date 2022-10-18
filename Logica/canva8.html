@@ -1,0 +1,51 @@
+
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla=document.querySelector("canvas")
+    var pincel=pantalla.getContext("2d")
+    var x=0,cn=0;
+    var x1,y1,r,px,py;
+
+    pincel.fillStyle="lightgrey"
+    pincel.fillRect(0,0,600,400)
+
+    function circu(x,y,rad,color){
+        pincel.fillStyle=color
+        pincel.beginPath()
+        pincel.arc(x,y,rad,0,2*Math.PI)
+        pincel.fill()
+
+    }
+
+    function limp(){
+        pincel.clearRect(0,0,600,400)
+        obje()
+    }
+
+    var r=10,alea;
+
+    function obje(){
+        x1=Math.round(Math.random()*600)
+        y1=Math.round(Math.random()*400)
+        circu(x1,y1,r+20,"red")
+        circu(x1,y1,r+10,"white")
+        circu(x1,y1,r,"red")
+    }
+
+    setInterval(limp,1000)
+
+    function di(evento){
+        px=evento.pageX-pantalla.offsetLeft
+        py=evento.pageY-pantalla.offsetTop
+        if(px<=x1+r && px>=x1-r && py<=y1+r && py>=y1-r){
+            alert("¡Acertado!")
+        }
+    }
+
+    pantalla.onclick=di
+
+    //setInterval(acp,5)
+
+</script>

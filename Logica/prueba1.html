@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function salto(){
+            document.write("<br><br>")
+        }
+        function imprimir(a){
+            document.write(a)
+            salto()
+        }
+
+
+        var num;
+        num=parseInt(prompt("Escribe un numero"))
+
+        while (num<0){
+            num=parseInt(prompt("Escribe un numero"))
+        }
+
+        if (num<=9){
+            imprimir("Valor de 1 digito")
+        }
+        else{
+            imprimir("Valor de mas de 1 digito")
+        }
+    </script>
+    
+</body>
+</html>

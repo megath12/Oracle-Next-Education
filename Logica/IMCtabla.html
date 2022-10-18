@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var v,pe,al,no,y,g;
+
+        function salto(){
+            document.write("<br><br><br>")
+        }
+        function imprimir(texto){
+            salto()
+            document.write(texto)
+            salto()
+        }
+
+        function cimc(a,b,c){
+            g=a/b**2
+            y="El IMC de "+c+" es el siguiente "+g;
+            imprimir(y);
+            return v
+        }
+
+        pe=prompt("Escibe tu peso ")
+        al=prompt("Escriba su altura ")
+        no=prompt("Escriba su nombre")
+        cimc(pe,al,no)
+
+        if (g<19.5){
+            imprimir("Insuficiencia")
+        }
+        else if(g>=19.5 && g<25){
+            imprimir("Normal")
+        }
+        else if(g>=25 && g<30){
+            imprimir("Preobesidad")
+        }        
+        else{
+            imprimir("Obesidad")
+        }
+ 
+
+    </script>
+</body>
+</html>

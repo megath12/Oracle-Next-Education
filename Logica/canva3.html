@@ -1,0 +1,21 @@
+
+<canvas width="600" height="600"></canvas>
+
+<script>
+    var pantalla=document.querySelector("canvas")
+    var pincel=pantalla.getContext("2d")
+
+    function re(x,y,color){
+        pincel.fillStyle=color
+        pincel.fillRect(x,y,50,50)
+        pincel.strokeStyle="gray"
+        pincel.strokeRect(x,y,50,50)
+    }
+
+    for(var tr=0;tr<=550;tr+=50){
+        for(var tg=0;tg<=550;tg+=50){
+            re(tr,tg,"cyan")
+        }
+    }
+</script>
+
